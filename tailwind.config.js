@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require("tailwindcss/colors");
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -11,6 +13,15 @@ module.exports = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      colors: {
+        mainBg: "#F8FAFD",
+        mainFont: "#444746",
+      },
+      boxShadow: {
+        "custom-light": "0 4px 6px rgba(0, 0, 0, 0.1)",
+        "custom-medium": "0 6px 12px rgba(0, 0, 0, 0.2)",
+        "custom-dark": "0 10px 20px rgba(0, 0, 0, 0.3)",
       },
     },
   },

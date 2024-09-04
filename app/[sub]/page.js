@@ -8,15 +8,20 @@ import {
 import MainTable from "@/components/MainTable";
 import FilesList from "@/components/FilesList";
 
-export default function Home() {
+export default function Home({ params }) {
   let tabs = ["Type", "People", "Modified"];
+
+  console.log(params.sub);
 
   return (
     <main className="flex min-h-screen flex-col rounded-3xl mt-4 bg-white text-mainFont w-full p-6 ">
       <div className="flex justify-between w-full ">
         <div className="flex gap-4 justify-center items-center">
-          <h5 className="text-2xl">My Drive</h5>
-          <FontAwesomeIcon icon={faCaretDown} />
+          <h5 className="text-2xl">
+            {params.sub === "starred"
+              ? "Starred"
+              : `My Drive /${params.sub.split("%20").join(" ")}`}
+          </h5>
         </div>
         <div className="flex justify-center items-center gap-2 ">
           <div className="flex rounded-3xl border-[1.5px] border-neutral-400 ">
@@ -47,7 +52,7 @@ export default function Home() {
         ))}
       </div>
       <MainTable />
-      <FilesList />
+      <FilesList path={params.sub} />
     </main>
   );
 }
