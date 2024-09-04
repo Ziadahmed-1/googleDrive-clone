@@ -133,7 +133,7 @@ function FileRow({ fileName, fileExtention, path }) {
           </div>
           <div>
             <FontAwesomeIcon
-              className="hover:bg-neutral-200 rounded-3xl cursor-pointer px-[0.9rem] py-2"
+              className="hover:bg-neutral-300 rounded-3xl cursor-pointer px-[0.9rem] py-2"
               icon={faEllipsisVertical}
             />
           </div>
