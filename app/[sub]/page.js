@@ -52,7 +52,7 @@ export default function Home({ params }) {
         ))}
       </div>
       <MainTable />
-      <FilesList path={params.sub} />
+      <FilesList path={params.sub.split("%20").join(" ")} />
     </main>
   );
 }
