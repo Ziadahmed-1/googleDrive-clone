@@ -80,7 +80,7 @@ function SearchBar() {
           <div className="hidden absolute w-full z-20 top-full left-0  bg-white shadow-lg py-4 px-1 rounded-b-3xl peer-focus:block">
             <hr />
             {inputValue && foldersView.length == 0 && filesView.length == 0 && (
-              <p className="text-xs pt-3">
+              <p className="text-xs pt-3 px-4">
                 No matching files or folders found for your search.
               </p>
             )}
